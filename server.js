@@ -2,7 +2,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.get('/', (req, res,next) => {
+app.use(express.static('public'))
+
+app.get('/', (req, res, next) => {
   res.send('hey im marumoto')
 })
 
